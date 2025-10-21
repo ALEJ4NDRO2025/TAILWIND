@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Pago</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-700 flex items-center justify-center">
+  <form class="bg-white p-6 rounded-xl shadow-md space-y-4 w-80">
+    <div>
+      <label class="block text-gray-700">Nombre</label>
+      <input type="text" required minlength="5"
+             class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 disabled:bg-red-800/20" disabled />
+      <p class="mt-1 text-sm text-red-500 hidden">El nombre es obligatorio</p>
+    </div>
+
+    <div>
+      <label class="block text-gray-700">Correo</label>
+      <input type="email" required
+             class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-400 invalid:bg-red-800/20" /> 
+      <p class="mt-1 text-sm text-red-500 hidden ">Debes escribir un correo válido</p>
+    </div>
+
+    <div>
+      <label class="block text-gray-700">Edad (1-99)</label>
+      <input type="number" min="1" max="99" required
+             class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-purple-400 invalid:bg-red-800/20" />
+      <p class="mt-1 text-sm text-red-500 hidden">La edad debe estar entre 1 y 99</p>
+    </div>
+
+    <button type="submit"
+            class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+      Enviar
+    </button>
+  </form
+
+
+</body>
+</html>
